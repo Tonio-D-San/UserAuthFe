@@ -12,6 +12,23 @@ interface FormData {
 }
 
 function App() {
+
+    const Watermark = () => (
+        <div style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            background: 'url(/corno_hamal.svg) center center no-repeat',
+            backgroundSize: 'contain',
+            opacity: 0.2,
+            pointerEvents: 'none',
+            zIndex: 9999,
+        }} />
+    );
+
+
     const [formData, setFormData] = useState<FormData>({
         username: "",
         password: "",
@@ -87,7 +104,9 @@ function App() {
     };
 
     return (
+
         <div style={{maxWidth: 400, margin: "auto", padding: 20, fontFamily: "sans-serif"}}>
+            <Watermark />
             <h2>Benvenuto!</h2>
 
             <h3>Accedi con credenziali</h3>
