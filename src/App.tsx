@@ -166,8 +166,16 @@ function App() {
             <hr/>
 
             <h3>Oppure</h3>
-            <a href={import.meta.env.VITE_GOOGLE_LOGIN_URL}>Accedi con Google</a>
-
+            <div className="flex flex-col items-center gap-4 mt-10">
+                <a href={import.meta.env.VITE_GOOGLE_LOGIN_URL} className="btn btn-google">
+                    Accedi con Google
+                </a>
+            </div>
+            <div className="flex flex-col items-center gap-4 mt-10">
+                <a href={import.meta.env.VITE_KC_LOGIN_URL} className="btn btn-keycloak">
+                    Accedi con Keycloak
+                </a>
+            </div>
         </div>
     );
 }
