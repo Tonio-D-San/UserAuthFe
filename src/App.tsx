@@ -1,5 +1,5 @@
 import './App.css'
-
+import PayPal from "./component/PayPal";
 function App() {
     const Watermark = () => (
         <div style={{
@@ -30,6 +30,9 @@ function App() {
                 >
                     Accedi con Keycloak
                 </a>
+            </div>
+            <div className="flex flex-col items-center gap-4 mt-10">
+                <PayPal />
             </div>
         </div>
     );
